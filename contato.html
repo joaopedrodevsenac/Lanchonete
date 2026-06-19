@@ -1,101 +1,132 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<title>JP Lanchonete</title>
-		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<header>
-			<div class="caixa">
-				<h1><img src="logo.png"></h1>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="cardapio.html">Cardápio</a></li>
-						<li><a href="contato.html">Contato</a></li>
-					</ul>
-				</nav>  
-			</div>
-		</header>
+<head>
+    <meta charset="UTF-8">
+    <title>JP Lanchonete</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <main>
-            <form>
-                <label for="nomesobrenome">Nome e Sobrenome</label>
-                <input type="text" id="nomesobrenome" class="input-padrao" required>
+<body>
 
-                <label for="email">E-mail</label>
-                <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+<header>
+    <div class="caixa">
+        <h1><img src="logo.png"></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav> 
+    </div>
+</header>
 
-                <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+<main>
+    <form>
+        <label for="nome">Nome e Sobrenome</label>
+        <input type="text" id="nome" class="input-padrao" required>
 
-                <label for="mensagem">Pedido ou Mensagem</label>
-                <input cols="70" rows="10" class="mensagem" class="input-padrao" required>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
 
-                <fieldset>
-                    <legend>Como prefere o nosso contato?</legend>
-                    <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
-                    <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
-                    <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
-                </fieldset>
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
 
-                <fieldset>
-                    <legend>Qual horário prefere receber seu pedido?</legend>
-                    <select>
-                        <option>18 horas</option>
-                        <option>19 horas</option>
-                        <option>20 horas</option>
-                        <option>21 horas</option>
-                        <option>22 horas(Somente de Segunda a Sábado)</option>
-                    </select>
-                </fieldset>
+        <label for="mensagem">Pedido ou Mensagem</label>
+        <textarea id="mensagem" class="input-padrao" rows="5" required></textarea>
 
-                <label><input type="checkbox" class="checkbox" checked="">Gostaria de receber nossas promoções por e-mail?</label>
+        <fieldset>
+            <legend>Como prefere o nosso contato?</legend>
+            <label><input type="radio" name="contato" value="email"> Email</label>
+            <label><input type="radio" name="contato" value="telefone"> Telefone</label>
+            <label><input type="radio" name="contato" value="whatsapp" checked> Whatsapp</label>
+        </fieldset>
 
-                <input type="submit" value="Enviar Pedido" class="enviar">
-            </form>
+        <fieldset>
+            <legend>Qual horário prefere receber seu pedido?</legend>
+            <select id="horario">
+                <option>18 horas</option>
+                <option>19 horas</option>
+                <option>20 horas</option>
+                <option>21 horas</option>
+                <option>22 horas (Somente de Segunda a Sábado)</option>
+            </select>
+        </fieldset>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Dia</th>
-                        <th>Horário</th>
-                    </tr>
-                </thead>
+        <label>
+            <input type="checkbox" id="promocao" checked>
+            Gostaria de receber nossas promoções por e-mail?
+        </label>
 
-                <tbody>
-                    <tr>
-                        <td>Segunda</td>
-                        <td>18h - 23h</td>
-                    </tr>
-                    <tr>
-                        <td>Quarta</td>
-                        <td>18h - 23h</td>
-                    </tr>
-                    <tr>
-                        <td>Sexta</td>
-                        <td>18h - 00h</td>
-                    </tr>
-                    <tr>
-                        <td>Sábado</td>
-                        <td>18h - 00h</td>
-                    </tr>
-                    <tr>
-                        <td>Domingos e Feriados</td>
-                        <td>18h - 21h</td>
-                    </tr>
-                </tbody>
-            </table>
+        <input type="submit" value="Enviar Pedido" class="enviar">
+    </form>
 
-            <br>
-            <p>Fazemos entregas somente nas Sextas e Sábados!</p>
-        </main>
+    <table>
+        <thead>
+            <tr>
+                <th>Dia</th>
+                <th>Horário</th>
+            </tr>
+        </thead>
 
-        <footer>
-			<img src="logo.png">
-			<p class="copyright">&copy; Copyright JP Lanchonete- 2026</p>
-		</footer>
-    </body>
+        <tbody>
+            <tr><td>Segunda</td><td>18h - 23h</td></tr>
+            <tr><td>Quarta</td><td>18h - 23h</td></tr>
+            <tr><td>Sexta</td><td>18h - 00h</td></tr>
+            <tr><td>Sábado</td><td>18h - 00h</td></tr>
+            <tr><td>Domingos e Feriados</td><td>18h - 21h</td></tr>
+        </tbody>
+    </table>
+
+    <br>
+    <p>Fazemos entregas somente nas Sextas e Sábados!</p>
+</main>
+
+<footer>
+    <img src="logo.png">
+    <p class="copyright">&copy; Copyright JP Lanchonete - 2026</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = "https://leuvfjvspbafrmdcvizs.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxldXZmanZzcGJhZnJtZGN2aXpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4NjY0ODIsImV4cCI6MjA5MjQ0MjQ4Mn0.DwdITrizQAYu33I3LifqaCRuzcy7L2OndfFqea48_tk";
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const telefone = document.getElementById("telefone").value;
+    const pedido = document.getElementById("mensagem").value;
+    const contato = document.querySelector('input[name="contato"]:checked').value;
+    const horario = document.getElementById("horario").value;
+    const promocao = document.getElementById("promocao").checked;
+
+    console.log("📦 Enviando:", { nome, email, telefone, pedido, contato, horario, promocao });
+
+    const { error } = await supabaseClient
+        .from("pedidos")
+        .insert([
+            { nome, email, telefone, pedido, contato, horario, promocao }
+        ]);
+
+    if (error) {
+        console.error("❌ ERRO:", error);
+        alert("Erro ao enviar pedido");
+    } else {
+        alert("Pedido enviado com sucesso 🍔🔥");
+        form.reset();
+    }
+});
+</script>
+
+</body>
 </html>

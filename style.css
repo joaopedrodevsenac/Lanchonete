@@ -20,7 +20,8 @@ header {
 
 .caixa {
 	position: relative;
-	width: 940px;
+	width: 90%;
+	max-width: 940px;
 	margin: 0 auto;
 }
 
@@ -57,57 +58,56 @@ nav a:hover {
 /* ===== PRODUTOS ===== */
 
 .produtos {
-    width: 940px;
-    margin: 0 auto;
-    padding: 50px 0;
+	width: 90%;
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
 }
 
 .produtos li {
-    display: inline-block;
-    text-align: center;
-    width: 30%;
-    vertical-align: top;
-    margin: 1.5%;
-    padding: 20px;
-    box-sizing: border-box;
-
-    border: 2px solid #000;
-    border-radius: 10px;
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 1.5%;
+	padding: 20px;
+	border: 2px solid #000;
+	border-radius: 10px;
 }
 
 .produtos li:hover {
-    border-color: #c78c19;
+	border-color: #c78c19;
 }
 
 .produtos li:active {
-    border-color: #088c19;
+	border-color: #088c19;
 }
 
 .produtos h2 {
-    font-size: 22px;
-    font-weight: bold;
+	font-size: 22px;
+	font-weight: bold;
 }
 
 .produtos li:hover h2 {
-    font-size: 24px;
+	font-size: 24px;
 }
 
 .produtos img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    margin: 10px 0;
-    border-radius: 8px;
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	margin: 10px 0;
+	border-radius: 8px;
 }
 
 .produto-descricao {
-    font-size: 16px;
+	font-size: 16px;
 }
 
 .produto-preco {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
 }
 
 /* FOOTER */
@@ -133,7 +133,8 @@ footer img {
 
 form {
 	margin: 40px auto;
-	width: 940px;
+	width: 90%;
+	max-width: 940px;
 }
 
 form label,
@@ -182,7 +183,8 @@ select {
 
 table {
 	margin: 20px auto 40px;
-	width: 940px;
+	width: 90%;
+	max-width: 940px;
 	border-collapse: collapse;
 	background: #1A1A1A;
 }
@@ -217,7 +219,8 @@ th {
 .principal {
 	padding: 3em 0;
 	background: #111111;
-	width: 940px;
+	width: 90%;
+	max-width: 940px;
 	margin: 0 auto;
 }
 
@@ -250,7 +253,8 @@ th {
 }
 
 .mapa-conteudo {
-	width: 940px;
+	width: 90%;
+	max-width: 940px;
 	margin: 0 auto;
 }
 
@@ -259,7 +263,7 @@ th {
 	text-align: center;
 }
 
-/* 🔥 BENEFÍCIOS (CORRIGIDO) */
+/* BENEFÍCIOS */
 
 .beneficios {
 	padding: 3em 0;
@@ -267,9 +271,9 @@ th {
 }
 
 .conteudo-beneficios {
-	width: 940px;
+	width: 90%;
+	max-width: 940px;
 	margin: 0 auto;
-
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -301,28 +305,23 @@ th {
 	opacity: 0.9;
 }
 
-/* VÍDEO */
+/* 🎥 VÍDEO RESPONSIVO */
 
 .video {
-	width: 560px;
+	width: 90%;
+	max-width: 800px;
 	margin: 2em auto;
+}
+
+.video iframe {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	border-radius: 10px;
 }
 
 /* RESPONSIVO */
 
 @media screen and (max-width: 480px) {
-
-	.caixa,
-	.principal,
-	form,
-	table,
-	.conteudo-beneficios,
-	.mapa-conteudo,
-	.video,
-	.produtos {
-		width: auto;
-		padding: 10px;
-	}
 
 	h1 {
 		text-align: center;
@@ -342,9 +341,9 @@ th {
 		font-size: 18px;
 	}
 
-	.produtos {
-		flex-direction: column;
-		padding: 20px;
+	.produtos li {
+		width: 100%;
+		margin: 10px 0;
 	}
 
 	.lista-beneficios,
@@ -360,8 +359,9 @@ th {
 		flex-direction: column;
 	}
 
-	.video iframe {
-		width: 100%;
-		height: auto;
+	.utensilios {
+		float: none;
+		display: block;
+		margin: 0 auto 20px;
 	}
 }
