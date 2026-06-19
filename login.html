@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - JP Lanchonetes</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script> 
+    <script src="login.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        header {
+            background: #000;
+            padding: 20px 0;
+            border-bottom: 2px solid #C78C19;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #C78C19;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: #000;
+            padding: 40px;
+            border: 2px solid #C78C19;
+            border-radius: 10px;
+        }
+
+        .container h2 {
+            color: #C78C19;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            color: #FFD700;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: none;
+            background: #ddd;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 12px;
+            background: orange;
+            border: none;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .links a {
+            color: #FFD700;
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Login</h2>
+
+        <label>Email</label> <input type="email" id="email">
+
+        <label>Senha</label> <input type="password" id="senha">
+
+        <button onclick="login()">Entrar</button>
+
+        <div class="links">
+            <a onclick="irCadastro()">Criar conta</a>
+            <a href="recuperarsenha.html">Esqueci minha senha</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

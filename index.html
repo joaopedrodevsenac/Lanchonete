@@ -2,7 +2,7 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>JP Lanchonete</title>
 
 		<link rel="stylesheet" href="reset.css">
@@ -19,6 +19,7 @@
 						<li><a href="index.html">Home</a></li>
 						<li><a href="cardapio.html">Cardápio</a></li>
 						<li><a href="contato.html">Contato</a></li>
+						<li><a href="login.html">Login</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -73,8 +74,14 @@
 			</section>
 
 			<div class="video">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.870807659389!2d-41.12910462481735!3d-20.836922780764898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb95d51a33f8ce3%3A0xba0eb9f758c2f205!2sR.%20H%C3%A9lio%20Heleno%20J%C3%BAnior%2C%2010%20-%20Vila%20Rica%2C%20Cachoeiro%20de%20Itapemirim%20-%20ES%2C%2029301-380!5e0!3m2!1spt-BR!2sbr!4v1779482014221!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>    
+				<iframe 
+					src="https://www.youtube.com/embed/wBqXNe8SMqQ?autoplay=1&mute=1&playsinline=1"
+					title="YouTube video player"
+					frameborder="0"
+					allow="autoplay; encrypted-media"
+					allowfullscreen>
+				</iframe>
+			</div>    
 		</main>
 
 		<footer>
@@ -82,4 +89,22 @@
 			<p class="copyright">&copy; Copyright JP Lanchonete- 2026</p>
 		</footer>
 	</body>
+	<script>
+		const SUPABASE_URL = "https://leuvfjvspbafrmdcvizs.supabase.co"
+		const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxldXZmanZzcGJhZnJtZGN2aXpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4NjY0ODIsImV4cCI6MjA5MjQ0MjQ4Mn0.DwdITrizQAYu33I3LifqaCRuzcy7L2OndfFqea48_tk"
+		const supabaseClient = supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
+		
+		async function verificarUsuario() {
+			const { data } = await supabaseClient.auth.getUser();
+		
+			if (data.user) {
+				console.log("✅ Logado:", data.user.email);
+			} else {
+				console.log("❌ Não logado");
+				window.location.href = "login.html";
+			}
+		}
+		
+		verificarUsuario();
+		</script>
 </html>
